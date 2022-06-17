@@ -24,6 +24,14 @@ exports.createPost = (req, res, next) => {
     });
   }
 
+  //uncomment this code when frontend would be ready
+  // if (!req.file) {
+  //   return res.status(422).json({
+  //     message: "No image provided",
+  //   });
+  // }
+  // const imageUrl = req.file.path;
+
   const title = req.body.title;
   const content = req.body.content;
   const post = new Post({
